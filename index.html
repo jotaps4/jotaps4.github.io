@@ -4,14 +4,15 @@
     <title>Auto GoldHEN Host</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-       body {
+     body {
     background-image: url("fondo.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; /* Para cubrir toda la pantalla */
-    background-attachment: fixed; /* Para mantener la imagen fija */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-attachment: fixed; /* Fija la imagen al desplazar la página */
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 .loader {
@@ -71,24 +72,6 @@
 .j {
     font-size: 15px;
     color: #d40606;
-}
-
-@media (max-width: 1200px) {
-    .info {
-        font-size: 40px;
-    }
-    .loader {
-        width: 130px;
-        height: 130px;
-    }
-    .loader::before {
-        width: 160px;
-        height: 160px;
-    }
-    .loader::after {
-        width: 200px;
-        height: 200px;
-    }
 }
 
 @media (max-width: 992px) {
@@ -162,7 +145,6 @@
         height: 120px;
     }
 }
-
 
 
 
