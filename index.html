@@ -21,10 +21,47 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: conic-gradient(from 0deg, #d40606, #1f1e1e, #d40606, #1f1e1e);
-    animation: spin 1s linear infinite, pulse 1.5s ease-in-out infinite;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 50%, #d40606 50%), linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, #1f1e1e 50%);
+    background-size: 100% 50%;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    animation: rotate 1.5s linear infinite;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+
+.loader::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 50%, #1f1e1e 50%), linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, #d40606 50%);
+    background-size: 100% 50%;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    animation: rotateReverse 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateReverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
 
 @keyframes spin {
     0% {
