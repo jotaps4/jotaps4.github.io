@@ -4,14 +4,13 @@
     <title>Auto GoldHEN Host</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body 
-        {
-            background-image: url("fondo.jpg");
-            height: 80%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+        body {
+    background-image: url("fondo.jpg");
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .loader {
     position: absolute;
@@ -55,26 +54,113 @@
     }
 }
 
+.info {
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 45px;
+    font-family: sans-serif;
+    color: #d40606;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
-        .info 
-        {
-            overflow: hidden;
-            position: fixed;
-            position: absolute;
-            top: 50%;
-            left: 50%;
+.j {
+    font-size: 15px;
+    color: #d40606;
+}
 
-            font-size: 45px;
-            font-family: sans-serif;
-            color: #d40606;
+@media (max-width: 1200px) {
+    .info {
+        font-size: 40px;
+    }
+    .loader {
+        width: 130px;
+        height: 130px;
+    }
+    .loader::before {
+        width: 160px;
+        height: 160px;
+    }
+    .loader::after {
+        width: 200px;
+        height: 200px;
+    }
+}
 
-            transform: translate(-50%, -50%);
-        }
+@media (max-width: 992px) {
+    .info {
+        font-size: 35px;
+    }
+    .loader {
+        width: 110px;
+        height: 110px;
+    }
+    .loader::before {
+        width: 140px;
+        height: 140px;
+    }
+    .loader::after {
+        width: 180px;
+        height: 180px;
+    }
+}
 
-        .j {
-            font-size: 15px;
-            color: #d40606;
-        }
+@media (max-width: 768px) {
+    .info {
+        font-size: 30px;
+    }
+    .loader {
+        width: 90px;
+        height: 90px;
+    }
+    .loader::before {
+        width: 120px;
+        height: 120px;
+    }
+    .loader::after {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 576px) {
+    .info {
+        font-size: 25px;
+    }
+    .loader {
+        width: 70px;
+        height: 70px;
+    }
+    .loader::before {
+        width: 100px;
+        height: 100px;
+    }
+    .loader::after {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 400px) {
+    .info {
+        font-size: 20px;
+    }
+    .loader {
+        width: 50px;
+        height: 50px;
+    }
+    .loader::before {
+        width: 80px;
+        height: 80px;
+    }
+    .loader::after {
+        width: 120px;
+        height: 120px;
+    }
+}
+
     </style>
      
      <script>
