@@ -13,7 +13,7 @@
             background-size: cover;
         }
 
-    .loader {
+.loader {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -21,27 +21,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 }
 
 .loader::before, .loader::after {
     content: '';
     border-radius: 50%;
-    border: 8px solid transparent;
+    border: 12px solid transparent;
     border-top-color: #d40606;
     position: absolute;
     animation: spin 1.2s linear infinite;
 }
 
 .loader::before {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
 .loader::after {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     border-top-color: #1f1e1e;
     animation-duration: 1.5s;
 }
@@ -55,58 +55,6 @@
     }
 }
 
-
-
-
-
-@keyframes rotate {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-@keyframes rotateReverse {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
-
-@keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-@keyframes pulse {
-    0%, 100% {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.2);
-    }
-    50% {
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 50px rgba(0, 0, 0, 0.4);
-    }
-}
-
-
-        @keyframes spin 
-        {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
 
         .info 
         {
