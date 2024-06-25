@@ -6,13 +6,12 @@
     <style>
      body {
     background-image: url("fondo.jpg");
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; /* Cubre toda la pantalla */
-    background-attachment: fixed; /* Fija la imagen al desplazar la página */
+    background-size: contain; /* Cambiado a 'contain' para asegurar que la imagen completa sea visible */
     margin: 0;
     padding: 0;
-    height: 100vh; /* Ajusta la altura del cuerpo al 100% del viewport */
 }
 
 .loader {
@@ -72,6 +71,24 @@
 .j {
     font-size: 15px;
     color: #d40606;
+}
+
+@media (max-width: 1200px) {
+    .info {
+        font-size: 40px;
+    }
+    .loader {
+        width: 130px;
+        height: 130px;
+    }
+    .loader::before {
+        width: 160px;
+        height: 160px;
+    }
+    .loader::after {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 @media (max-width: 992px) {
