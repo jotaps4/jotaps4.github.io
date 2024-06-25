@@ -13,36 +13,30 @@
             background-size: cover;
         }
 
-        .loader {
+       .loader {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top: 8px solid #d40606;
     border-radius: 50%;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 50%, #d40606 50%), linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, #1f1e1e 50%);
-    background-size: 100% 50%;
-    background-position: 0% 50%;
-    background-repeat: no-repeat;
-    animation: rotate 1.5s linear infinite;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: spin 1s ease-in-out infinite;
 }
 
-.loader::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 50%, #1f1e1e 50%), linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, #d40606 50%);
-    background-size: 100% 50%;
-    background-position: 0% 50%;
-    background-repeat: no-repeat;
-    animation: rotateReverse 1.5s linear infinite;
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
+
+
+
 
 @keyframes rotate {
     0% {
