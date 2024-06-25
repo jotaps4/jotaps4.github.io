@@ -4,7 +4,8 @@
     <title>Auto GoldHEN Host</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-     body {
+     /* Estilo base del body */
+body {
     background-image: url("fondo.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -12,6 +13,15 @@
     margin: 0;
     padding: 0;
 }
+
+/* Media query para forzar modo landscape */
+@media (orientation: portrait) {
+    body {
+        background-size: contain; /* Cambia a 'contain' en orientación portrait */
+    }
+}
+
+/* Resto de tu CSS existente... */
 .loader {
     position: absolute;
     left: 50%;
