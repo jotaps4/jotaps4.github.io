@@ -4,32 +4,16 @@
     <title>Auto GoldHEN Host</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-    /* Estilo base del body */
-/* Estilo base del body */
-body {
+   body {
     background-image: url("fondo.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    -webkit-background-size: cover; /* Safari/Chrome */
+    -moz-background-size: cover; /* Firefox */
+    -o-background-size: cover; /* Opera */
     background-size: cover;
     margin: 0;
     padding: 0;
-}
-
-/* Media query para ajustar en pantallas grandes */
-@media (min-width: 1200px) {
-    body {
-        background-size: auto 100%; /* Ocupa el 100% del alto en pantallas grandes */
-    }
-}
-
-/* Media query para orientación portrait */
-@media (orientation: portrait) {
-    body {
-        background-size: contain; /* Ajusta a 'contain' en orientación portrait para evitar cortes */
-    }
 }
 
 /* Resto de tu CSS existente... */
