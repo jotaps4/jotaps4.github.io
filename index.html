@@ -13,20 +13,37 @@
             background-size: cover;
         }
 
-        .loader 
-        {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -75px 0 0 -75px;
-            border: 10px solid #1f1e1e;
-            border-radius: 50%;
-            border-top: 10px solid #d40606;
-            border-left: 10px solid #d40606;
-            width: 120px;
-            height: 120px;
-            animation: spin 1s linear infinite;
-        }
+        .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #d40606, #1f1e1e, #d40606, #1f1e1e);
+    animation: spin 1s linear infinite, pulse 1.5s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 50px rgba(0, 0, 0, 0.4);
+    }
+}
+
 
         @keyframes spin 
         {
