@@ -6,17 +6,14 @@
     <style>
    body {
     background-image: url("fondo.jpg");
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-background-size: cover; /* Safari/Chrome */
-    -moz-background-size: cover; /* Firefox */
-    -o-background-size: cover; /* Opera */
-    background-size: cover;
+    background-size: contain; /* Cambiado a 'contain' para asegurar que la imagen completa sea visible */
     margin: 0;
     padding: 0;
 }
 
-/* Resto de tu CSS existente... */
 .loader {
     position: absolute;
     left: 50%;
@@ -76,7 +73,6 @@
     color: #d40606;
 }
 
-/* Media queries adicionales para ajustes específicos */
 @media (max-width: 1200px) {
     .info {
         font-size: 40px;
