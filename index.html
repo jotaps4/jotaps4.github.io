@@ -9,15 +9,15 @@ body {
     background-image: url("fondo.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover; /* Por defecto, la imagen cubre el contenedor */
     margin: 0;
     padding: 0;
 }
 
-/* Media query para forzar modo landscape */
-@media (orientation: portrait) {
+/* Media query para ajustar en pantallas grandes */
+@media (min-width: 1200px) {
     body {
-        background-size: contain; /* Cambia a 'contain' en orientación portrait */
+        background-size: auto 100%; /* Ocupa el 100% del alto en pantallas grandes */
     }
 }
 
@@ -170,6 +170,7 @@ body {
         height: 120px;
     }
 }
+
 
 
     </style>
