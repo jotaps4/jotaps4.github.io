@@ -1,181 +1,231 @@
+<!DOCTYPE html>
 <html manifest="jota.cache">
-    
+
 <head>
     <title>Auto GoldHEN JotaHost</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-	   body {
-	    background-image: url("fondo.jpg");
-	    height: 100vh;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: contain; /* Cambiado a 'contain' para asegurar que la imagen completa sea visible */
-	    margin: 0;
-	    padding: 0;
-		background-color: #01091d;
-}
+        body {
+            background-image: url("fondo.jpg");
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0;
+            padding: 0;
+            background-color: #01091d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
 
-.loader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-}
+        .text-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            font-size: 3em; /* Tamaño de fuente aumentado */
+        }
 
-.loader::before, .loader::after {
-    content: '';
-    border-radius: 50%;
-    border: 12px solid transparent;
-    border-top-color: #d40606;
-    position: absolute;
-    animation: spin 1.2s linear infinite;
-}
+        .loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+        }
 
-.loader::before {
-    width: 180px;
-    height: 180px;
-}
+        .loader::before,
+        .loader::after {
+            content: '';
+            border-radius: 50%;
+            border: 12px solid transparent;
+            border-top-color: #d40606;
+            position: absolute;
+            animation: spin 1.2s linear infinite;
+        }
 
-.loader::after {
-    width: 230px;
-    height: 230px;
-    border-top-color: #1f1e1e;
-    animation-duration: 1.5s;
-}
+        .loader::before {
+            width: 180px;
+            height: 180px;
+        }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+        .loader::after {
+            width: 230px;
+            height: 230px;
+            border-top-color: #1f1e1e;
+            animation-duration: 1.5s;
+        }
 
-.info {
-    overflow: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    font-size: 45px;
-    font-family: sans-serif;
-    color: #d40606;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
 
-.j {
-    font-size: 15px;
-    color: #d40606;
-}
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-@media (max-width: 1200px) {
-    .info {
-        font-size: 40px;
-    }
-    .loader {
-        width: 130px;
-        height: 130px;
-    }
-    .loader::before {
-        width: 160px;
-        height: 160px;
-    }
-    .loader::after {
-        width: 200px;
-        height: 200px;
-    }
-}
+        .info {
+            overflow: hidden;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            font-size: 45px;
+            font-family: sans-serif;
+            color: #d40606;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
 
-@media (max-width: 992px) {
-    .info {
-        font-size: 35px;
-    }
-    .loader {
-        width: 110px;
-        height: 110px;
-    }
-    .loader::before {
-        width: 140px;
-        height: 140px;
-    }
-    .loader::after {
-        width: 180px;
-        height: 180px;
-    }
-}
+        @media (max-width: 1200px) {
+            .info {
+                font-size: 40px;
+            }
 
-@media (max-width: 768px) {
-    .info {
-        font-size: 30px;
-    }
-    .loader {
-        width: 90px;
-        height: 90px;
-    }
-    .loader::before {
-        width: 120px;
-        height: 120px;
-    }
-    .loader::after {
-        width: 160px;
-        height: 160px;
-    }
-}
+            .loader {
+                width: 130px;
+                height: 130px;
+            }
 
-@media (max-width: 576px) {
-    .info {
-        font-size: 25px;
-    }
-    .loader {
-        width: 70px;
-        height: 70px;
-    }
-    .loader::before {
-        width: 100px;
-        height: 100px;
-    }
-    .loader::after {
-        width: 140px;
-        height: 140px;
-    }
-}
+            .loader::before {
+                width: 160px;
+                height: 160px;
+            }
 
-@media (max-width: 400px) {
-    .info {
-        font-size: 20px;
-    }
-    .loader {
-        width: 50px;
-        height: 50px;
-    }
-    .loader::before {
-        width: 80px;
-        height: 80px;
-    }
-    .loader::after {
-        width: 120px;
-        height: 120px;
-    }
-}
+            .loader::after {
+                width: 200px;
+                height: 200px;
+            }
+        }
 
+        @media (max-width: 992px) {
+            .info {
+                font-size: 35px;
+            }
 
+            .loader {
+                width: 110px;
+                height: 110px;
+            }
+
+            .loader::before {
+                width: 140px;
+                height: 140px;
+            }
+
+            .loader::after {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .info {
+                font-size: 30px;
+            }
+
+            .loader {
+                width: 90px;
+                height: 90px;
+            }
+
+            .loader::before {
+                width: 120px;
+                height: 120px;
+            }
+
+            .loader::after {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        .text-overlay {
+            font-size: 2.5em; /* Ajuste del tamaño de la fuente para pantallas más pequeñas */
+            padding: 0.8em 0;
+        }
+
+        @media (max-width: 576px) {
+            .info {
+                font-size: 25px;
+            }
+
+            .loader {
+                width: 70px;
+                height: 70px;
+            }
+
+            .loader::before {
+                width: 100px;
+                height: 100px;
+            }
+
+            .loader::after {
+                width: 140px;
+                height: 140px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-overlay {
+                font-size: 2em; /* Ajuste del tamaño de la fuente para pantallas muy pequeñas */
+                padding: 0.6em 0;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .info {
+                font-size: 20px;
+            }
+
+            .loader {
+                width: 50px;
+                height: 50px;
+            }
+
+            .loader::before {
+                width: 80px;
+                height: 80px;
+            }
+
+            .loader::after {
+                width: 120px;
+                height: 120px;
+            }
+        }
     </style>
-     
-     <script>
-        window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Cache de host iniciado!!";};
-        window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
-        window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache almacenado exitosamente!!";setTimeout(function(){document.getElementById("progress").innerHTML="Apaga el Internet & Abre de nuevo el navegador!!"; }, 1500);};
-        window.applicationCache.onnoupdate=function(){setTimeout(webkitExploit,500);};
-	    window.applicationCache.onerror=function(){setTimeout(webkitExploit,500);};
 
-        function allset() 
-        {
+    <script>
+        window.applicationCache.ondownloading = function () {
+            document.getElementById("progress").innerHTML = "Almacenando host en memoria";
+        };
+        window.applicationCache.onprogress = function (a) {
+            document.getElementById("progress").innerHTML = (Math.round(100 * (a.loaded / a.total))) + "%";
+        };
+        window.applicationCache.oncached = function () {
+            document.getElementById("progress").innerHTML = "Host almacenado en memoria.";
+            setTimeout(function () {
+                document.getElementById("progress").innerHTML = "Reinicia el navegador, por favor.";
+            }, 1500);
+        };
+        window.applicationCache.onnoupdate = function () {
+            setTimeout(webkitExploit, 500);
+        };
+        window.applicationCache.onerror = function () {
+            setTimeout(webkitExploit, 500);
+        };
+
+        function allset() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("allset").style.display = "block";
         }
@@ -184,9 +234,12 @@
 </head>
 
 <body>
-    <h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:yellow;'></h1><br>
+    <h1 id="progress" style="font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:yellow;"></h1><br>
     <div id="loader" class="loader"></div>
-    <div id="allset" class="info" style="display:none;">Liberacion completada. Cierra el Navegador!</div>
+    <div id="allset" class="info" style="display:none;">Liberacion completada. Puedes cerrar el navegador.</div>
+
+    <!-- Contenedor de texto superpuesto -->
+    <div class="text-overlay">Actualizado a GoldHen v2.4b17.3</div>
 </body>
 
 </html>
